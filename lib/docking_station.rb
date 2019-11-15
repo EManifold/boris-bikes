@@ -3,7 +3,7 @@ class DockingStation
   attr_reader :bike
 
   def release_bike
-    @bike
+    @bike ? @bike : (fail "There are no bikes")
   end
 
   def dock(bike)
@@ -11,5 +11,3 @@ class DockingStation
   end
 
 end
-
-
